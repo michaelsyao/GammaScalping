@@ -3,7 +3,7 @@ Option Strategy for Futures. This is a event-driven strategy.
 
 ## I. Definition
 ### **Project Overview**
-This project is to replicate the training strategy from a workshop.
+This project is to replicate the training strategy from a workshop and overcome the potential issue of Strategy 1.
 
 ### **Strategy 1: Shorting Crude Oil Futures Option Straddle**
 Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. But as with any options strategy, especially strategies that trade intraday, the implementation details can be staggering. This will be a good example of some of the issues we face.
