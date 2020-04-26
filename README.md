@@ -1,6 +1,6 @@
 # GammaScalping
 Option Strategy for Futures. This is a event-driven strategy.The Basic concept as follows:
-1.Buy a staddle (LC + LP)
+>1.Buy a staddle (LC + LP)
 2.Perfectly delta neutral
 3.Underlying falls? Add long stock
 4.Underlying rises? Add short stock.
