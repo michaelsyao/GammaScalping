@@ -1,5 +1,9 @@
 # GammaScalping
-Option Strategy for Futures. This is a event-driven strategy.
+Option Strategy for Futures. This is a event-driven strategy.The Basic concept as follows:
+1.Buy a staddle (LC + LP)
+2.Perfectly delta neutral
+3.Underlying falls? Add long stock
+4.Underlying rises? Add short stock.
 
 ## I. Definition
 ### **Project Overview**
@@ -8,9 +12,9 @@ This project is to replicate the training strategy from a workshop and overcome 
 ### **Strategy 1: Shorting Crude Oil Futures Option Straddle**
 Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. 
 
-Crude oil futures (symbol CL) on CME Globex expire around the 22th of every month ahead of the delivery month. For example, the February 2015 contract (denoted as CLG15) will cease trading on or around January 22, 2015. However, its options (symbol LO) expire three (3) business days ahead. Table 5.2 offers a summary of the first and last dates that each contract will be a candidate for trading by our strategy. Note that we trade only options on the front (nearest to expiration) futures contract, but at the same time we require the option to have a tenor (time‐to‐maturity) of about two weeks. The option expiration date is approximate only, and the first trading date of J12 and the last trading date of J13 are irregular due to the limitation of our data. Furthermore, there is no guarantee that this choice of tenor produces the optimal returns: It should be treated as a parameter to be optimized. (Similarly, the exact entry and exit dates and times are free parameters to be optimized, too.) The data are from Nanex.net, which are time‐stamped to the nearest 25 milliseconds.
+Crude oil futures (symbol CL) on CME Globex expire around the 22th of every month ahead of the delivery month. For example, the February 2015 contract (denoted as CLG15) will cease trading on or around January 22, 2015. However, its options (symbol LO) expire three (3) business days ahead. Note that we trade only options on the front (nearest to expiration) futures contract, but at the same time we require the option to have a tenor (time‐to‐maturity) of about two weeks. The option expiration date is approximate only, and the first trading date of J12 and the last trading date of J13 are irregular due to the limitation of our data. Furthermore, there is no guarantee that this choice of tenor produces the optimal returns: It should be treated as a parameter to be optimized. (Similarly, the exact entry and exit dates and times are free parameters to be optimized, too.) The data are from Nanex.net.
 
-Chan, Ernest P.. Machine Trading (Wiley Trading) (p. 135). Wiley. Kindle Edition. 
+As a straddle consists of one pair of an ATM put and call, we need to find out what strike price is ATM at the moment of the trade entry. Hence, we need to first retrieve the quotes data for the underlying CL futures contracts and determine the midprice at 9:00 a.m. Eastern Time on Thursdays. Notice that this is already a simplification: We have treated those holiday weeks when the releases were on Thursdays at 11:00 a.m. in the same way as the regular weeks. But if anything, this will only deflate our backtest performance, which gives us a more conservative estimate of the strategy profitability. In case either a Thursday and the following Wednesday is not a trading day, our code will take care not to enter into a position. After finding the underlying future's midprice and
 
 ### **Strategy 2: Gamma Scalping Crude Oil Futures**
 Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. But as with any options strategy, especially strategies that trade intraday, the implementation details can be staggering. This will be a good example of some of the issues we face.
