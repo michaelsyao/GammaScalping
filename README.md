@@ -8,8 +8,8 @@ This project is to replicate the training strategy from a workshop and overcome 
 ### **Strategy 1: Shorting Crude Oil Futures Option Straddle**
 Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. But as with any options strategy, especially strategies that trade intraday, the implementation details can be staggering. This will be a good example of some of the issues we face.
 
-### **Strategy 2: Gamma scalping crude oil futures **
-A formal definition of MSE can be seen as below ([Wikipedia](https://en.wikipedia.org/wiki/Mean_squared_error)):
+### **Strategy 2: Gamma Scalping Crude Oil Futures**
+Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. But as with any options strategy, especially strategies that trade intraday, the implementation details can be staggering. This will be a good example of some of the issues we face.
 
 > In statistics, the mean squared error (MSE) or mean squared deviation (MSD) of an estimator (of a procedure for estimating an unobserved quantity) measures the average of the squares of the errors or deviations—that is, the difference between the estimator and what is estimated.
 
