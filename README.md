@@ -24,7 +24,7 @@ Specifically, I will be using stock prices of Apple but this study can easily be
 
 Before we make any adjustments to the raw data let's take a look at the distributions of the estimators and how they compare amongst one another.
 
-```python
+```Matlab
 import pandas_datareader.data as web
 
 # _ get data from Quandl
