@@ -9,9 +9,7 @@ Option Strategy for Futures. This is a event-driven strategy.The Basic concept a
 ### **Project Overview**
 This project is to replicate the trading strategy from a workshop and overcome the potential catastropic loss of Strategy 1 while a black swan event(like oil plunge in April 2020) occurs. 
 
-### **Strategy 1: Shorting Crude Oil Futures Option Straddle**
->[Strategy 1: ](project_1_starter.ipynb)
-   
+### **[Strategy 1: Shorting Crude Oil Futures Option Straddle](FINAL_shortStrangle_Strategy1.m)**
 Short a straddle on the day after the release date of a “US Weekly Petroleum Status Report,” and buy a cover just before the next release. 
 
 Crude oil futures (symbol CL) on CME Globex expire around the 22th of every month ahead of the delivery month. For example, the February 2015 contract (denoted as CLG15) will cease trading on or around January 22, 2015. However, its options (symbol LO) expire three (3) business days ahead. Note that we trade only options on the front (nearest to expiration) futures contract, but at the same time we require the option to have a tenor (time‐to‐maturity) of about two weeks. The option expiration date is approximate only, and the first trading date of J12 and the last trading date of J13 are irregular due to the limitation of our data. Furthermore, there is no guarantee that this choice of tenor produces the optimal returns. The data are from Nanex.net.
